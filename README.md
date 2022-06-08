@@ -1,7 +1,7 @@
 # insomnia-plugin-inso-plugin-support
 A (very!) hacky way to support insomnia plugins in inso-cli
 
-## Hot to get it?
+## How to get it?
 ```sh
 # npm install -g insomnia-plugin-inso-plugin-support
 ```
