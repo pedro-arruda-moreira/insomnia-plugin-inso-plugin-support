@@ -14,6 +14,16 @@ if(isNotValid(typeof global.require)) {
 	const PATH_TO_MODULE = `${process.cwd()}${separator}node_modules${separator}insomnia-inso`;
 	const FILE_LINE = 119;
 	const EXTERNAL_PLUGIN = "::external::";
+	const argv = process.argv;
+	let hasCiFlag = false;
+	argv.forEach(function(arg) {
+		hasCiFlag = hasCiFlag || arg == '--ci';
+	});
+	hasCiFlag = hasCiFlag || process.env['insomnia-plugin-inso-plugin-support-debug'] == 'true';
+	if(!hasCiFlag) {
+		console.log('use only with --ci or environment var insomnia-plugin-inso-plugin-support-debug=true');
+		process.exit(1);
+	}
 
 
 	function getAllPlugins(path) {

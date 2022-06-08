@@ -6,6 +6,10 @@
     "name": "inso-plugin-support",
     "description": "A (very!) hacky way to support insomnia plugins in inso-cli"
   },
+  "bin": "bin/inso-with-plugins.js",
+  "engines": {
+    "node": ">= 8.10.0"
+  },
   "main": "main.js",
   "license": "MIT",
   "homepage": "https://github.com/pedro-arruda-moreira/insomnia-plugin-inso-plugin-support",

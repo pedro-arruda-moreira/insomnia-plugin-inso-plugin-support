@@ -11,6 +11,7 @@ A (very!) hacky way to support insomnia plugins in inso-cli
 - When used as a standalone application:
 ```sh
 $ set INSO_EXTRA_PLUGINS_PATH=/path/to/a/directory/containing/plugins
+$ # same command line options as inso.
 $ inso-with-plugins run test --ci
 $ # Be warned: after execution, inso may get corrupted, this is very hacky and only
 $ # suitable for CI builds with ephemeral virtual disks (e.g. AWS CodeBuild)
