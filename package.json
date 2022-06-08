@@ -1,16 +1,21 @@
 {
   "name": "insomnia-plugin-inso-plugin-support",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "private": false,
   "insomnia": {
     "name": "inso-plugin-support",
     "description": "A (very!) hacky way to support insomnia plugins in inso-cli"
   },
-  "bin": "bin/inso-with-plugins.js",
-  "engines": {
-    "node": ">= 8.10.0"
+  "bin": {
+    "inso-with-plugins": "main.js"
   },
-  "main": "main.js",
+  "files": [
+    "main.js"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "license": "MIT",
   "homepage": "https://github.com/pedro-arruda-moreira/insomnia-plugin-inso-plugin-support",
   "repository": {
