@@ -1,18 +1,14 @@
 {
   "name": "insomnia-plugin-inso-plugin-support",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "insomnia": {
     "name": "inso-plugin-support",
     "description": "A (very!) hacky way to support insomnia plugins in inso-cli"
   },
   "bin": {
-    "inso-with-plugins": "main.js"
+    "inso-with-plugins": "bin/inso-with-plugins.js"
   },
-  "files": [
-    "main.js"
-  ],
-  "type": "module",
   "engines": {
     "node": ">=8.10.0"
   },
