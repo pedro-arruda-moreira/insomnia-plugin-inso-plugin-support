@@ -41,7 +41,7 @@ if(isNotValid(typeof global.require)) {
 				`${PATH_TO_MODULE}${separator}node_modules${separator}${name}${separator}dist${separator}index.js`
 			).contentSync(allPlugins).at(FILE_LINE);
 		}
-		ret = this.originalRequire;
+		ret = this.originalRequire(name);
 		if(name == 'insomnia-inso') {
 			const obtainedModule = moduleCache[`${PATH_TO_MODULE}${separator}dist${separator}index.js`];
 			global.require = function(name) {
