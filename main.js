@@ -11,7 +11,7 @@ if(isNotValid(typeof global.require)) {
 	const fs = require('fs');
 	const moduleCache = Module._cache;
 	const PLUGIN_DIR = process.env['INSO_EXTRA_PLUGINS_PATH'];
-	const PATH_TO_MODULE = `${process.cwd()}${separator}node_modules${separator}insomnia-inso`;
+	const PATH_TO_MODULE = `${__dirname}${separator}node_modules${separator}insomnia-inso`;
 	const FILE_LINE = 119;
 	const EXTERNAL_PLUGIN = "::external::";
 	const argv = process.argv;
@@ -36,9 +36,9 @@ if(isNotValid(typeof global.require)) {
 	Module.prototype.originalRequire = Module.prototype.require;
 	Module.prototype.require = function(name) {
 		let ret = null;
-		if(name == 'insomnia-send-response') {
+		if(name == 'insomnia-send-request') {
 			insertLine(
-				`${PATH_TO_MODULE}${separator}node_modules${separator}${name}${separator}dist${separator}index.js`
+				`${PATH_TO_MODULE}${separator}..${separator}${name}${separator}dist${separator}index.js`
 			).contentSync(allPlugins).at(FILE_LINE);
 		}
 		ret = this.originalRequire(name);
